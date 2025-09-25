@@ -4,16 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booking your book?</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-gray-100 h-screen flex">
-    <div>
-      <h2>Search</h2>
-      <input id="search" type="text" placeholder="insert title" />
+  <body>
+    <div class="container-fluid">
+      <div class="row vh-100">
+        <!-- Left panel :  Configure Search -->
+        <div class="col-md-3 bg-light-p3">
+          <h4>Search</h4>
+
+          <div class="mb-3">
+            <label for="searchText">Search Title</label>
+            <input
+              id="searchText"
+              type="text"
+              placeholder="Insert title here"
+              class="form-control"
+            />
+            <button id="searchButton" class="btn btn-primary mt-2 w-100">
+              Search
+            </button>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label"
+              >Number of books to display:
+              <span id="numBooksVal">5</span></label
+            >
+            <input
+              type="range"
+              min="1"
+              max="20"
+              value="5"
+              id="numberBooksRange"
+              class="form-range"
+            />
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Right panel :  Display Search -->
+        <div class="col-md-9 p-3 overflow-auto" id="booksContainer"></div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
