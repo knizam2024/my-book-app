@@ -2,6 +2,8 @@ body {
   background-color: #f8f9fa;
 }
 
-#booksContainer .card {
-  height: 100%;
+/* Ensure card images look uniform */
+.book-card .card-img-top {
+  height: 240px;
+  object-fit: cover;
 }
